@@ -2,11 +2,11 @@ const mysql = require('mysql');
 
 exports.execSQLQuery = (sqlQry, res) => {
     const connection = mysql.createConnection({
-      host     : 'localhost',
+      host     : 'hserv16.homehost.com.br',
       port     : 3306,
-      user     : 'root',
-      password : 'root',
-      database : 'pochete_memory'
+      user     : 'softdsc2_fae',
+      password : '[]1Q2w3e4r',
+      database : 'softdsc2_pochete_memory'
     });
     connection.query(sqlQry, function(error, results, fields){
         if(error) 
