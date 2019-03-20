@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+var cors = require('cors')
 
 const whitelist = ["https://account.dwoom.com", "http://localhost"]
 const corsOptions = {

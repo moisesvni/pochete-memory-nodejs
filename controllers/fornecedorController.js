@@ -1,7 +1,11 @@
 const db = require('../bin/db');
 
-exports.get = (req, res, next) => {
+exports.list = (req, res, next) => {
     db.execSQLQuery('SELECT * FROM fornecedor', res);
+};
+exports.get = (req, res, next) => {
+    let id = req.params.id;
+    db.execSQLQuery(`SELECT * FROM fornecedor where idfornecedor = ${id}`, res);
 };
 exports.post = (req, res, next) => {
     res.status(201).send('Requisição recebida com sucesso!');
