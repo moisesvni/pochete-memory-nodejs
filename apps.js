@@ -12,8 +12,11 @@ app.options("*", cors())
 
 //Rotas
 const index = require('./routes');
-const fornecedorRoute = require('./routes/fornecedorRoute');
 app.use('/', index);
+
+const filialRoute = require('./routes/filial');
+app.use('/filial', filialRoute);
+const fornecedorRoute = require('./routes/fornecedor');
 app.use('/fornecedor', fornecedorRoute);
 
 module.exports = app;
